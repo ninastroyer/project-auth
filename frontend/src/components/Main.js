@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import thoughts from "reducers/thoughts";
 import { API_URL } from "utils/urls";
 import user from "reducers/user";
+import { Button } from "./GlobalStyles";
 
 const Main = () => {
     const thoughtItems = useSelector((store) => store.thoughts.items);
@@ -47,8 +48,8 @@ const Main = () => {
     }
     return(
         <>
-            <button type="button" onClick={onLogoutButtonClick}>LOGOUT</button>
-            {username ? (<h2>THESE ARE THE THOUGHTS OF {username.toUpperCase()}</h2>): ""}
+            <Button secretpage type="button" onClick={onLogoutButtonClick}>LOGOUT</Button>
+            {username ? (<h2>Welcome {username.toUpperCase()}. How can we help you today?</h2>): ""}
             {thoughtItems.map(item => {
                 return(<p key={item._id}>{item.message}</p>)
             })}
