@@ -88,8 +88,7 @@ export const Button = styled.button`
     border: 1px var(--lightColor) solid;
     color: var(--primaryBlack);
   }
-`;
-
+  `
 
 export const P = styled.p`
   margin-top: 50px;
