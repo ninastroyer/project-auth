@@ -12,6 +12,11 @@ export const InsideWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 500px;
+
+  @media (max-width: 768px) {
+   width: 100%;
+   padding: 0 20px;
+ }
 `;
 
 export const InputContainer = styled.div`
@@ -27,12 +32,19 @@ export const Input = styled.input`
   padding: 20px;
 `;
 
+export const ButtonContainer = styled.div`
+  margin: auto;
+`;
+
 export const RegisterButton = styled.button`
   background-color: var(--mainColor);
   color: var(--primaryWhite);
   font-size: 18px;
   border-radius: 30px;
   height: 50px;
+  width: 120px;
+  margin: auto;
+  margin-right: 10px;
   border: 1px var(--mainColor) solid;
   margin-top: 50px;
 
@@ -49,6 +61,9 @@ export const LoginButton = styled.button`
   font-size: 18px;
   border-radius: 30px;
   height: 50px;
+  width: 120px;
+  margin: auto;
+  margin-left: 10px;
   border: 1px var(--mainColor) solid;
   margin-top: 50px;
 
