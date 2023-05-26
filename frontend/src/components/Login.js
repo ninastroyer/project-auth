@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import user from "reducers/user";
 import { API_URL } from "utils/urls";
-import { Button, Wrapper, InsideWrapper, InputContainer, Input, P } from "./GlobalStyles";
+import { Button, RegisterButton, LoginButton, Wrapper, InsideWrapper, InputContainer, Input, P } from "./GlobalStyles";
 
 const Login = () => {
     const [username, setUsername] = useState("");
@@ -46,43 +46,42 @@ const Login = () => {
     }
     return(
         <>  
-        <Wrapper>
-            <h1>Sign up</h1>
-            <InsideWrapper>
-                <label htmlFor="register">Register</label>
-                <input 
-                    type="radio" 
-                    id="register" 
-                    checked={mode === "register"}
-                    onChange={() => setMode("register")}/>
-                <label htmlFor="login">Login</label>
-                <input 
-                    type="radio" 
-                    id="login" 
-                    checked={mode === "login"}
-                    onChange={() => setMode("login")}/>
-                    <form onSubmit={onFormSubmit}>
-                    <InputContainer>
-                        <label htmlFor="username"><P>Username:</P></label>
-                        <Input 
-                            type="text" 
-                            id="username" 
-                            value={username} 
-                            onChange={e => setUsername(e.target.value)} />
-                        <label htmlFor="password"><P>Password:</P></label>
-                        <Input 
-                            type="password" 
-                            id="password" 
-                            value={password} 
-                            onChange={e => setPassword(e.target.value)} />
-                        <Button type="submit">Submit</Button>
-                    </InputContainer>
-                    </form>
-            </InsideWrapper>
-         </Wrapper>
-        </>
-       
-    );
+    <Wrapper>
+    <h1>Sign up</h1>
+    <InsideWrapper>
+    <RegisterButton
+     className="button-secondary"
+     type="button"
+     onClick={() => setMode("register")}>
+   Register
+   </RegisterButton>
+   <LoginButton
+   className="button-secondary"
+   type="button"
+   onClick={() => setMode("login")}>
+  Login
+</LoginButton>
+<form onSubmit={onFormSubmit}>
+<InputContainer>
+<label htmlFor="username"><P>Username:</P></label>
+<Input 
+type="text" 
+id="username" 
+value={username} 
+onChange={e => setUsername(e.target.value)} />
+<label htmlFor="password"><P>Password:</P></label>
+<Input 
+type="password" 
+id="password" 
+value={password} 
+onChange={e => setPassword(e.target.value)} />
+<Button type="submit">Submit</Button>
+</InputContainer>
+</form>
+</InsideWrapper>
+</Wrapper>
+ </>
+);
 }
 
 export default Login;
