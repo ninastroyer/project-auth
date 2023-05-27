@@ -88,9 +88,29 @@ export const Button = styled.button`
     border: 1px var(--lightColor) solid;
     color: var(--primaryBlack);
   }
+
+  ${(styling) => styling.secretpage && css`
+background-color: var(--lightColor); 
+color: var(--primaryBlack);
+border: 1px var(--lightColor) solid;
+padding: 15px;
+margin-bottom: 30px;
+
+&:hover {
+    background-color: var(--mainColor); 
+    border: 1px var(--mainColor) solid;
+    color: var(--primaryBlack);
+  }
+  `
+  } 
   `
 
 export const P = styled.p`
+  margin-top: 50px;
+  margin-left: 20px;
+`;
+
+export const H = styled.h1`
   margin-top: 50px;
   margin-left: 20px;
 `;

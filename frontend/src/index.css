@@ -11,6 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--primaryWhite);
   font-family: 'Raleway', sans-serif;
+  list-style: none;
 }
 
 code {
@@ -30,8 +31,27 @@ code {
 }
 
 input[type=text]:focus{
-  outline: 1px solid var(--dark);     /* oranges! yey */
+  outline: 1px solid var(--dark);    
 }
 input[type=password]:focus{
-  outline: 1px solid var(--dark);     /* oranges! yey */
+  outline: 1px solid var(--dark);    
+}
+
+.button-secondary:active {
+  border: 1px solid var(--primaryBlack);
+}
+
+.button-secondary:focus {
+  background-color: var(--primaryBlack);
+  border: 1px solid var(--primaryBlack);
+}
+.button-secondary:focus:hover {
+  background-color: var(--primaryBlack);
+  color: var(--primaryWhite);
+  border: 1px solid var(--primaryBlack);
+}
+
+.button-secondary:focus:target {
+  background-color: var(--primaryBlack);
+  color: var(--primaryWhite)
 }

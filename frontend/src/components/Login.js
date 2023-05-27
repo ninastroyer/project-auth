@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import user from "reducers/user";
 import { API_URL } from "utils/urls";
-import { Button, RegisterButton, LoginButton, ButtonContainer, Wrapper, InsideWrapper, InputContainer, Input, P } from "./GlobalStyles";
+import { Button, RegisterButton, LoginButton, ButtonContainer, Wrapper, InsideWrapper, InputContainer, Input, P, H } from "./GlobalStyles";
 
 const Login = () => {
     const [username, setUsername] = useState("");
@@ -46,44 +46,44 @@ const Login = () => {
     }
     return(
         <>  
-    <Wrapper>
-    <h1>Sign up</h1>
-    <InsideWrapper>
-    <ButtonContainer>
-    <RegisterButton
-     className="button-secondary"
-     type="button"
-     onClick={() => setMode("register")}>
-   Register
-   </RegisterButton>
-   <LoginButton
-   className="button-secondary"
-   type="button"
-   onClick={() => setMode("login")}>
-  Login
-</LoginButton>
-</ButtonContainer>
-<form onSubmit={onFormSubmit}>
-<InputContainer>
-<label htmlFor="username"><P>Username:</P></label>
-<Input 
-type="text" 
-id="username" 
-value={username} 
-onChange={e => setUsername(e.target.value)} />
-<label htmlFor="password"><P>Password:</P></label>
-<Input 
-type="password" 
-id="password" 
-value={password} 
-onChange={e => setPassword(e.target.value)} />
-<Button type="submit">Submit</Button>
-</InputContainer>
-</form>
-</InsideWrapper>
-</Wrapper>
- </>
-);
-}
+            <Wrapper>
+                <H>Welcome to the service.</H>
+                <InsideWrapper>
+                    <ButtonContainer>
+                        <RegisterButton
+                            className="button-secondary"
+                            type="button"
+                            onClick={() => setMode("register")}>
+                            Register
+                        </RegisterButton>
+                        <LoginButton
+                            className="button-secondary"
+                            type="button"
+                            onClick={() => setMode("login")}>
+                            Login
+                        </LoginButton>
+                    </ButtonContainer>
+                    <form onSubmit={onFormSubmit}>
+                    <InputContainer>
+                    <label htmlFor="username"><P>Username:</P></label>
+                    <Input 
+                        type="text" 
+                        id="username" 
+                        value={username} 
+                        onChange={e => setUsername(e.target.value)} />
+                    <label htmlFor="password"><P>Password:</P></label>
+                    <Input 
+                        type="password" 
+                        id="password" 
+                        value={password} 
+                        onChange={e => setPassword(e.target.value)} />
+                    <Button type="submit">Submit</Button>
+                    </InputContainer>
+                    </form>
+                </InsideWrapper>
+            </Wrapper>
+        </>
+                );
+                }
 
-export default Login;
+        export default Login;
