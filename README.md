@@ -1,6 +1,6 @@
 # Project Auth API
 
-Project done in a pair-programming with Nina Ströyer. The goal was to build a register / log in page, so the user can have the access to their 'secret page'.
+Project done in a pair-programming with Maja Zimnoch. The goal was to build a register / log in page, so the user can have the access to their 'secret page'.
 We were using <bold> tokens </bold> to authenitciate user.
 We learnt how to <bold> securely </bold> store passwork in the data base.
 We build a registartion flow, handled authentication, both in the frontend and in the backend. It was first time working in one repository for both frontend and backend. We were using Mongo DB and Compass. Backend is deployed to GoogleCloud, while frontend on Netlify. 
